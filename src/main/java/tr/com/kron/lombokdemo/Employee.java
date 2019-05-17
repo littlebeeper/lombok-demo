@@ -5,13 +5,14 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode
 public class Employee {
     private String firstName;
     private String lastname;
-    private String email;
+    private final String email;
+    @ToString.Exclude private final String password;
 
 }
 

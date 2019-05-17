@@ -12,7 +12,7 @@ class EmployeeTest {
 
     @BeforeAll
     static void setup() {
-        employee = new Employee("Cuneyt", "Ozen", "cuneyt.ozen@kron.com.tr");
+        employee = new Employee("Cuneyt", "Ozen", "cuneyt.ozen@kron.com.tr","myS3cr3t" );
     }
 
     @Test
@@ -26,9 +26,15 @@ class EmployeeTest {
     @Test
     @DisplayName("should be equal to same object")
     void shouldBeEqualToSameObject() {
-        var sameEmployee = new Employee("Cuneyt", "Ozen", "cuneyt.ozen@kron.com.tr");
+        var sameEmployee = new Employee("Cuneyt", "Ozen", "cuneyt.ozen@kron.com.tr","myS3cr3t");
         assertEquals(employee.hashCode(), sameEmployee.hashCode());
         assertTrue(employee.equals(sameEmployee));
+    }
+
+    @Test
+    @DisplayName("Should show output of ToString method")
+    void shouldShowOutputOfToStringMethod() {
+        System.out.printf("%n ToString Output: %s %n", employee);
     }
 
 }
