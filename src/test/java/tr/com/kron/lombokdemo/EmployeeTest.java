@@ -28,12 +28,14 @@ class EmployeeTest {
     void shouldBeEqualToSameObject() {
         var sameEmployee = new Employee("Cuneyt", "Ozen", "cuneyt.ozen@kron.com.tr","myS3cr3t");
         assertEquals(employee.hashCode(), sameEmployee.hashCode());
-        assertTrue(employee.equals(sameEmployee));
+        assertEquals(employee,sameEmployee);
     }
 
     @Test
-    @DisplayName("Should show output of ToString method")
+    @DisplayName("Should not included password field on ToString")
     void shouldShowOutputOfToStringMethod() {
+
+        assertFalse(employee.toString().contains("password"));
         System.out.printf("%n ToString Output: %s %n", employee);
     }
 
