@@ -7,11 +7,11 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @RequiredArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Employee {
     private String firstName;
     private String lastname;
-    private final String email;
+    @EqualsAndHashCode.Include private final String email;
     @ToString.Exclude private final String password;
 
 }
