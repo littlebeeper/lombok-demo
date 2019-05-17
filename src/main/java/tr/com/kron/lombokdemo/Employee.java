@@ -7,6 +7,15 @@ public class Employee {
     private String lastname;
     private String email;
 
+    public Employee() {
+    }
+
+    public Employee(String firstName, String lastname, String email) {
+        this.firstName = firstName;
+        this.lastname = lastname;
+        this.email = email;
+    }
+
     public String getFirstName() {
         return firstName;
     }
