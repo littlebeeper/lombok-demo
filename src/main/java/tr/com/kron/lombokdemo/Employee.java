@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.Wither;
 
 @Value
+@Builder
 public class Employee {
     private String firstName;
     private String lastname;

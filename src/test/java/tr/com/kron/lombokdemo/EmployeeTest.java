@@ -59,4 +59,21 @@ class EmployeeTest {
 
         );
     }
+
+    @Test
+    @DisplayName("Should construct object with builder pattern")
+    void shouldConstructObjectWithBuilderPattern() {
+        final var anotherEmployee = Employee
+                .builder()
+                .email("cuneyt.ozen@kron.com.tr")
+                .firstName("Cuneyt")
+                .lastname("Ozen")
+                .password("myS3cr3t")
+                .build();
+
+        assertEquals("Cuneyt", anotherEmployee.getFirstName());
+        assertEquals("Ozen", anotherEmployee.getLastname());
+        assertEquals("cuneyt.ozen@kron.com.tr", anotherEmployee.getEmail());
+    }
+
 }
