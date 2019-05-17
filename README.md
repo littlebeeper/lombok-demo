@@ -1,5 +1,4 @@
-# lombok-demo
-##Introduction to Lombok with Sdkman and Junit5
+## Introduction to Lombok with Sdkman, Junit5 and Java 11
 
 A live demonstration of how lombok shortens Java boilerplate code.
 
